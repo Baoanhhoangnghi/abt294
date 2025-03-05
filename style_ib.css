@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------Wireframe site palette-----------------
+Body background: #e7d6a8 (wheat)
+Primary text & Nav hover hyperlinks: #1b251d (eerie black)
+Nav bg: #908b44 (olive)
+Nav hyperlinks: #cad3db (french gray)
+Footer bg: #edeee7 (alabaster)
+Retrieved from: https://coolors.co/cad3db-edeee7-e7d6a8-908b44-1b251d
+----------------------------------------------------*/
+*, *:before, *:after { box-sizing: inherit;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Hind Siliguri", sans-serif;
+    color: #1b251d;
+    background-color: #E7D6A8;
+    font-size: 1.5em;
+}
+.content-wrap {
+    padding: 2.3em;
+}
+h1, h2, h3 {
+    font-family: "Playwrite IT Moderna", cursive;
+    text-align: center;
+}
+header {
+    background-image: url(../img/vrnzza.jpg);
+    background-attachment: fixed;
+    min-height: 350px;
+    font-family: "Playwrite IT Moderna", cursive;
+}
+header h1 {
+    color: #edeee7;
+    text-shadow: 1.5px 1.5px 2px #000000;
+    padding-top: 2em;
+    font-size: 3em;
+    font-family: "Playwrite IT Moderna", cursive;
+}
+main {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap:2em;
+	padding:2em;
+}
+* {
+	margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0; 
+    display: flex; /* Align items in the same line */
+    justify-content: center; /* Align items in the center horizontally */
+	gap: 2em;}
+nav {
+    background-color: #908b44;
+    text-align: center;
+	margin: 0;
+	padding:0;
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 0.5em;
+    display: inline-block;
+    color: #cad3db;
+    text-decoration: none;
+    border-bottom: thin solid #E7D6A8;
+}
+footer {
+    background-color: #EDEEE7;
+}
+#main-content{
+    grid-area: main-content;
+    display: flex;
+    justify-content: space-between;
+	gap: 2em;
+	padding: 2em;
+}
+#section-1 {
+grid-area: section-1;}
+#section-2 {
+grid-area: section-2;}
+#section-3 {
+grid-area: section-3;}
+#section-4 {
+grid-area: section-4;}
+
+
+@media screen and (min-width:800px){
+    main {
+    display: grid; /* Enable grid layout */
+    grid-template-areas: 
+      "sect-1 sect-2"
+      "sect-3 sect-4"; /* Create a 2x2 grid */
+    grid-gap: 10px;  /* Add a small gap between grid items */
+    justify-content: space-around; /* Distribute space around grid items */
+  }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+}
